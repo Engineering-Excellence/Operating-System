@@ -1,3 +1,3 @@
 hello: hello.c
-	gcc -o hello hello.c
+	gcc -g -o hello hello.c
 

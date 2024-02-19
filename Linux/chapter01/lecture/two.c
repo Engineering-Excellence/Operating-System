@@ -2,5 +2,5 @@
 #include "../include/printmsg.h"
 
 void printmsg(void) {
-    puts("Hello, world!\n");
+    puts("Hello, world!");
 }

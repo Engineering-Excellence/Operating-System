@@ -1,12 +1,12 @@
 /* program ex03-01.c */
-#include <sys/types.h>
+//#include <sys/types.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
 
 int main(void) {
-    int filedes, fdnew1, fdnew2;    // 파일 서술자(File Descriptor)
+    int filedes, fdnew1, fdnew2;    // 파일 기술자(File Descriptor)
     ssize_t nread;  // read()로 읽은 바이트 수
     off_t newpos;   // 읽기/쓰기 포인터 위치
 

@@ -15,13 +15,13 @@ int main(void) {
 
     filedes = open("data.txt", O_RDWR); // 파일을 읽기 쓰기용으로 개방
 
-    nread = read(filedes, buffer, 1024);    // 파일 읽기
+    nread = read(filedes, buffer, sizeof(buffer) - 1);    // 파일 읽기
     printf("%s", buffer);
 
     write(filedes, content, strlen(content));   // 파일 쓰기
 
     newpos = lseek(filedes, (off_t) 0, SEEK_SET);   // 읽기/쓰기 포인터 위치를 맨 처음(SEEK_SET)으로 이동
-    nread = read(filedes, buffer, 1024);
+    nread = read(filedes, buffer, sizeof(buffer) - 1);
     printf("%s", buffer);
 
     close(filedes);  // 파일 닫기

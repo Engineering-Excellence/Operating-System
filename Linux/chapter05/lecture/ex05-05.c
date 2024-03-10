@@ -18,9 +18,9 @@ int main(void) {
 
     rewinddir(dirp);    // 디렉터리 포인터가 가리키는 디렉터리 항을 첫 번째 항으로 초기화
 
-    puts("삭제된 파일 목록");
+    puts("\n삭제된 파일 목록");
     while ((dentry = readdir(dirp)) != NULL) {
-        if (dentry->d_ino == 0)
+        if (dentry->d_ino == 0)     // 삭제된 파일(아이노드 번호 0)만 출력
             puts(dentry->d_name);
     }
 

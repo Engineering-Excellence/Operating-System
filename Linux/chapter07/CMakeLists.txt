@@ -4,3 +4,4 @@ project(chapter07)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(ex07-01 lecture/ex07-01.c)
+add_executable(ex07-02 lecture/ex07-02.c)
